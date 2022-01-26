@@ -20,7 +20,7 @@ const About = () => {
   ];
 
   return (
-    <section className="w-full min-h-screen">
+    <section className="w-full min-h-screen" id="about">
       <div className="w-3/4 pt-24 mx-auto">
         <h2 className="text-gray-800 text-5xl font-semibold text-center">
           About Me

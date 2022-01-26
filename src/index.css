@@ -15,7 +15,3 @@
 ::-webkit-scrollbar-thumb:hover {
     background: rgb(97, 97, 97);
 }
-
-html {
-    scroll-behavior: smooth;
-}

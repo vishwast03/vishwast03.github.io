@@ -74,7 +74,7 @@ const Portfolio = () => {
   };
 
   return (
-    <section className="w-full min-h-screen bg-gray-100 pb-14">
+    <section className="w-full min-h-screen bg-gray-100 pb-14" id="portfolio">
       <div className="w-[90%] mx-auto pt-24 flex justify-between items-center">
         <div>
           <p className="text-emerald-500 text-3xl">Portfolio</p>

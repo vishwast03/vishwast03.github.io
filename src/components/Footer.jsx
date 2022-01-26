@@ -39,12 +39,16 @@ const Footer = () => {
           <i className="fab fa-linkedin-in"></i>
         </a>
       </div>
-      <a href="https://github.com/vishwast03/vishwast03.github.io" target="_blank" className="text-gray-50 text-center">
+      <a
+        href="https://github.com/vishwast03/vishwast03.github.io"
+        target="_blank"
+        className="text-gray-50 text-center"
+      >
         <h3 className="my-2">Built by Vishwas Tyagi</h3>
         <h3>
           Made with <i className="fas fa-heart text-[#fe251b] mx-1"></i>
-          <i class="devicon-react-original text-[#61DAFB] mx-1"></i>
-          <i class="devicon-tailwindcss-plain text-[#06B6D4] mx-1"></i>
+          <i className="devicon-react-original text-[#61DAFB] mx-1"></i>
+          <i className="devicon-tailwindcss-plain text-[#06B6D4] mx-1"></i>
         </h3>
       </a>
     </footer>

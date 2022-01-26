@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import icon from "../images/icon.png";
+import { Link } from "react-scroll";
+import Navlinks from "./Navlinks";
 
 const Navbar = () => {
   const [navFixed, setNavFixed] = useState(false);
@@ -26,9 +28,9 @@ const Navbar = () => {
       id="navbar"
     >
       <div className="mx-14" id="logo">
-        <a href="/">
+        <Link to="home" smooth={true} duration={500} className="cursor-pointer">
           <img className="h-14 hover:opacity-90" src={icon} alt="icon" />
-        </a>
+        </Link>
       </div>
       <div
         className={`w-2/5 text-lg font-semibold font-sans ${
@@ -36,28 +38,7 @@ const Navbar = () => {
         }`}
         id="nav-links"
       >
-        <ul className="w-full flex justify-evenly underline-offset-8">
-          <li>
-            <a className="underline" href="/">
-              Home
-            </a>
-          </li>
-          <li>
-            <a className="hover:underline" href="/">
-              About
-            </a>
-          </li>
-          <li>
-            <a className="hover:underline" href="/">
-              Portfolio
-            </a>
-          </li>
-          <li>
-            <a className="hover:underline" href="/">
-              Contact
-            </a>
-          </li>
-        </ul>
+        <Navlinks />
       </div>
     </nav>
   );
