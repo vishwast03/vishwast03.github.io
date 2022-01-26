@@ -19,7 +19,7 @@ const Home = () => {
         </button>
       </div>
       <div className="h-4/5 absolute z-20 bottom-0 right-32">
-          <img className="h-full -scsale-x-100" src={image} alt="image" />
+        <img className="h-full -scsale-x-100" src={image} alt="image" />
       </div>
     </main>
   );

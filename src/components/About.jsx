@@ -1,4 +1,4 @@
-import TechnologyCard from "./TechnologyCard";
+import TechCard from "./TechCard";
 
 const About = () => {
   const technologyStack = [
@@ -36,10 +36,10 @@ const About = () => {
         <h2 className="text-gray-800 text-3xl font-semibold text-center my-8">
           Technology Stack
         </h2>
-        <div className="w-4/5 mx-auto flex flex-wrap justify-center">
+        <div className="w-4/5 mx-auto mb-16 flex flex-wrap justify-center">
           {technologyStack.map((technology) => {
             return (
-              <TechnologyCard
+              <TechCard
                 key={technology.name}
                 name={technology.name}
                 icon={technology.icon}
@@ -53,6 +53,3 @@ const About = () => {
 };
 
 export default About;
-
-// <script src="https://kit.fontawesome.com/583b440ca9.js" crossorigin="anonymous"></script>
-// grid justify-items-center grid-cols-6 gap-5
