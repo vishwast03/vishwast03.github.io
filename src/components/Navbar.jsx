@@ -1,10 +1,11 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import icon from "../images/icon.png";
 import { Link } from "react-scroll";
 import Navlinks from "./Navlinks";
 
 const Navbar = () => {
   const [navFixed, setNavFixed] = useState(false);
+  const navRef = useRef(null);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -18,6 +19,14 @@ const Navbar = () => {
         setNavFixed(false);
       }
     });
+
+    document.addEventListener("click", (e) => {
+      if (e.target.id === "show-nav") {
+        navRef.current.classList.toggle("hidden");
+      } else {
+        navRef.current.classList.add("hidden");
+      }
+    });
   }, []);
 
   return (
@@ -27,18 +36,31 @@ const Navbar = () => {
       }`}
       id="navbar"
     >
-      <div className="mx-14" id="logo">
+      <div className="mx-6 sm:mx-10 xl:mx-14" id="logo">
         <Link to="home" smooth={true} duration={500} className="cursor-pointer">
-          <img className="h-14 hover:opacity-90" src={icon} alt="icon" />
+          <img
+            className="h-10 hover:opacity-90 sm:h-14"
+            src={icon}
+            alt="icon"
+          />
         </Link>
       </div>
       <div
-        className={`w-2/5 text-lg font-semibold font-sans ${
-          navFixed ? "text-emerald-500" : "text-gray-50"
-        }`}
+        className={`w-fit text-lg font-semibold font-sans relative`}
         id="nav-links"
       >
-        <Navlinks />
+        <button className="text-2xl text-emerald-500 mx-6 sm:text-3xl sm:text-gray-50 lg:hidden">
+          <i id="show-nav" className="fas fa-bars"></i>
+        </button>
+        <div
+          ref={navRef}
+          className="w-[50vw] bg-gray-100 absolute right-5 rounded-md shadow-lg hidden sm:w-[35vw] lg:hidden"
+        >
+          <Navlinks />
+        </div>
+        <div className="hidden lg:block">
+          <Navlinks navFixed={navFixed} />
+        </div>
       </div>
     </nav>
   );

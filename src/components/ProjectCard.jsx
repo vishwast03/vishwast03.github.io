@@ -3,13 +3,13 @@ const ProjectCard = (props) => {
   const tags = project.tags;
 
   return (
-    <div className="w-80 my-10 rounded-md bg-gray-50 shadow-lg">
+    <div className="w-72 my-6 mx-auto rounded-md bg-gray-50 shadow-lg sm:w-80 sm:my-8 lg:my-10">
       <img
         className="rounded-t-md border-b"
         src={project.image}
         alt="project screenshot"
       />
-      <div className="px-5 py-3">
+      <div className="px-3 py-3 md:px-5">
         <div className="flex">
           {tags &&
             tags.map((tag) => {
@@ -23,11 +23,11 @@ const ProjectCard = (props) => {
               );
             })}
         </div>
-        <h3 className="text-2xl text-gray-800 font-semibold py-2">
+        <h3 className="text-xl text-gray-800 font-semibold py-2 md:text-2xl">
           {project.title}
         </h3>
-        <p className="text-xl text-gray-600">{project.subtitle}</p>
-        <div className="w-1/2 text-3xl text-gray-600 mx-auto my-4 flex justify-evenly">
+        <p className="text-lg text-gray-600 lg:text-xl">{project.subtitle}</p>
+        <div className="w-1/2 text-2xl text-gray-600 mx-auto my-2 flex justify-evenly md:text-3xl md:my-4">
           {project.preview && (
             <a href={project.preview} target="_blank">
               <i className="fas fa-external-link-alt hover:text-emerald-500 transition-colors"></i>

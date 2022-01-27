@@ -1,9 +1,13 @@
 import { Link } from "react-scroll";
 
-const Navlinks = () => {
+const Navlinks = (props) => {
   return (
-    <ul className="w-full flex justify-evenly underline-offset-8">
-      <li>
+    <ul
+      className={`w-fit text-emerald-500 text-center my-5 mx-auto flex flex-col underline-offset-8 lg:flex-row lg:my-0 lg:mx-10 ${
+        props.navFixed ? "lg:text-emerald-500" : "lg:text-gray-50"
+      }`}
+    >
+      <li className="my-3 lg:my-0 lg:mx-7 xl:mx-12">
         <Link
           activeClass="underline"
           to="home"
@@ -15,20 +19,20 @@ const Navlinks = () => {
           Home
         </Link>
       </li>
-      <li>
+      <li className="my-3 lg:my-0 lg:mx-7 xl:mx-12">
         <Link
           activeClass="underline"
           to="about"
           spy={true}
           smooth={true}
-          offset={-20}
+          offset={-0}
           duration={500}
           className="hover:underline cursor-pointer"
         >
           About
         </Link>
       </li>
-      <li>
+      <li className="my-3 lg:my-0 lg:mx-7 xl:mx-12">
         <Link
           activeClass="underline"
           to="portfolio"
@@ -41,7 +45,7 @@ const Navlinks = () => {
           Portfolio
         </Link>
       </li>
-      <li>
+      <li className="my-3 lg:my-0 lg:mx-7 xl:mx-12">
         <Link
           activeClass="underline"
           to="contact"

@@ -16,12 +16,12 @@ const TechCard = (props) => {
   return (
     <div
       ref={cardRef}
-      className={`w-32 m-5 h-28 shadow-md ${
+      className={`w-32 h-28 m-2 shadow-md ${
         mouseOver ? "bg-emerald-500" : "bg-gray-100"
-      } rounded-md flex flex-col justify-center items-center transition-colors duration-300`}
+      } rounded-md flex flex-col justify-center items-center transition-colors duration-300 md:m-3 lg:m-4 xl:m-5`}
     >
-      <i className={`${props.icon} text-4xl ${mouseOver ? "text-gray-50" : "text-emerald-500"}`}></i>
-      <span className={`text-xl ${mouseOver ? "text-gray-50" : "text-gray-800"} py-2`}>{props.name}</span>
+      <i className={`${props.icon} text-3xl ${mouseOver ? "text-gray-50" : "text-emerald-500"} md:text-4xl`}></i>
+      <span className={`text-lg ${mouseOver ? "text-gray-50" : "text-gray-800"} py-2 lg:text-xl`}>{props.name}</span>
     </div>
   );
 };
