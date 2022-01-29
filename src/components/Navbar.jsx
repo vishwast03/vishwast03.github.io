@@ -46,10 +46,14 @@ const Navbar = () => {
         </Link>
       </div>
       <div
-        className={`w-fit text-lg font-semibold font-sans relative`}
+        className="w-fit text-lg font-semibold font-sans relative"
         id="nav-links"
       >
-        <button className="text-2xl text-emerald-500 mx-6 sm:text-3xl sm:text-gray-50 lg:hidden">
+        <button
+          className={`text-2xl text-emerald-500 mx-6 sm:text-3xl lg:hidden ${
+            navFixed ? "sm:text-emerald-500" : " sm:text-gray-50"
+          }`}
+        >
           <i id="show-nav" className="fas fa-bars"></i>
         </button>
         <div

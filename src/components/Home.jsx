@@ -5,7 +5,7 @@ const Home = (props) => {
 
   return (
     <main
-      className="w-full bg-gray-100 lg:h-screen lg:relative lg:z-0"
+      className="w-full bg-gray-100 max-h-[60rem] lg:h-screen lg:relative lg:z-0"
       style={{
         background: `${
           viewWidth > 639
