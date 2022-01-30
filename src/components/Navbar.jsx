@@ -36,7 +36,7 @@ const Navbar = () => {
       }`}
       id="navbar"
     >
-      <div className="mx-6 sm:mx-10 xl:mx-14" id="logo">
+      <div className="mx-6 sm:mx-10 xl:mx-14">
         <Link to="home" smooth={true} duration={500} className="cursor-pointer">
           <img
             className="h-10 hover:opacity-90 sm:h-14"
@@ -62,7 +62,7 @@ const Navbar = () => {
         >
           <Navlinks />
         </div>
-        <div className="hidden lg:block">
+        <div triggerOnce direction="down" className="hidden lg:block">
           <Navlinks navFixed={navFixed} />
         </div>
       </div>
