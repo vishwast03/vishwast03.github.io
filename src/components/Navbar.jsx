@@ -58,7 +58,7 @@ const Navbar = () => {
         </button>
         <div
           ref={navRef}
-          className="w-[50vw] bg-gray-100 absolute right-5 rounded-md shadow-lg hidden sm:w-[35vw] lg:hidden"
+          className="w-[50vw] bg-gray-50 absolute right-5 rounded-md shadow-lg hidden sm:w-[35vw] lg:hidden"
         >
           <Navlinks />
         </div>
