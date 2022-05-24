@@ -11,7 +11,7 @@ function App() {
 
   const profileLinks = {
     email: "vishwast8126@gmail.com",
-    twitter: "https://twitter.com/VishwasT03",
+    twitter: "https://twitter.com/vishwast03",
     linkedin: "https://www.linkedin.com/in/vishwas-tyagi/",
     github: "https://github.com/vishwast03",
     codepen: "https://codepen.io/vishwast03",
@@ -48,6 +48,19 @@ function App() {
       ],
       preview: "",
       github: "https://github.com/vishwast03/Chat-Soft",
+    },
+    {
+      image: "https://i.imgur.com/xCwnQd1.png",
+      title: "Movieium",
+      subtitle: "Online movie ticket booking system",
+      tags: [
+        { name: "React", logo: "react" },
+        { name: "Express", logo: "express" },
+        { name: "MongoDB", logo: "mongodb" },
+      ],
+      preview: "https://movieium.vercel.app/",
+      github:
+        "https://github.com/vishwast03/Movieium-Online_Movie_Ticket_Booking_System",
     },
     {
       image: "https://i.imgur.com/6knYfcD.png",
